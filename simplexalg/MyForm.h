@@ -414,6 +414,8 @@ namespace simplexalg {
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->pictureBox1);
+			this->MaximumSize = System::Drawing::Size(711, 448);
+			this->MinimumSize = System::Drawing::Size(711, 448);
 			this->Name = L"MyForm";
 			this->Text = L"Form1 \"M-метод\"";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -492,12 +494,13 @@ namespace simplexalg {
 		SLAU1[3][7] = 20;
 
 
-		for (int n = 0; n < 4; n++)
-		{
-			for (int t = 0; t < 8; t++)
-				cout << SLAU1[n][t] << " ";
-			//cout << "\n"; // Пошаговый вывод
-		}
+		//for (int n = 0; n < 4; n++)
+		//{
+		//	for (int t = 0; t < 8; t++)
+		//		cout << SLAU1[n][t] << " ";
+		//	//cout << "\n"; // Пошаговый вывод
+		//}
+
 
 		for (int n = 0; n < 4; n++) // backup
 			for (int t = 0; t < 8; t++)
@@ -512,12 +515,12 @@ namespace simplexalg {
 				SLAU2[0][t] += SLAU1[n][t];
 
 
-		for (int n = 0; n < 4; n++)
-		{
-			for (int t = 0; t < 8; t++)
-				cout << SLAU2[n][t] << " ";
-			//cout << "\n"; // Пошаговый вывод
-		}
+		//for (int n = 0; n < 4; n++)
+		//{
+		//	for (int t = 0; t < 8; t++)
+		//		cout << SLAU2[n][t] << " ";
+		//	//cout << "\n"; // Пошаговый вывод
+		//}
 
 
 		int k = 1, l = 1;
@@ -534,7 +537,7 @@ namespace simplexalg {
 		for (int n = 0; n < 8; n++)
 		{
 			SLAU2[2][n] = SLAU2[2][n] - SLAU2[k][n] * d;
-			cout << SLAU2[2][n] << " "; // Пошаговый вывод
+			//cout << SLAU2[2][n] << " "; // Пошаговый вывод
 		}
 		cout << "\n";
 		d = SLAU2[3][1] / r;   //4 КОЭФ
@@ -569,7 +572,7 @@ namespace simplexalg {
 		for (int n = 0; n < 8; n++)
 		{
 			SLAU2[3][n] = SLAU2[3][n] - SLAU2[k][n] * d;
-			cout << SLAU2[3][n] << " "; // Пошаговый вывод
+			//cout << SLAU2[3][n] << " "; // Пошаговый вывод
 		}
 
 		for (int n = 0; n < 8; n++) {
